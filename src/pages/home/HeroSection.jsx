@@ -5,35 +5,64 @@ import { FaSearch } from "react-icons/fa";
 const Hero = () => {
   return (
     <section
-      className="h-screen relative bg-cover bg-center text-white"
+      className="relative h-screen bg-gradient-to-r from-blue-500 to-purple-600 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bannerImg})` }}
     >
-      <div
-        className="text-center md:pt-44 pt-24 space-y-6 md:w-1/2 mx-auto
-      "
-      >
-        <h1 className="text-3xl md:text-5xl font-medium lg:leading-tight leading-snug px-2 text-gray-50">
-          Make your interior more minimalistic & modern
-        </h1>
-        <p className="text-xs font-normal w-1/2 mx-auto text-gray-200">
-          Turn your room with panto into a lot more minimalist and modern with
-          ease and speed
-        </p>
-        {/* search field  */}
-        <div className="relative inline-block z-30">
-          <input
-            type="text"
-            placeholder="Search Furniture"
-            className="w-80 px-6 py-2 bg-white/28 rounded-full border border-gray-300 focus:outline-none "
-          />
-          <div className="absolute right-3 top-1/2  transform -translate-y-1/2 p-2 bg-orange-300 rounded-full cursor-pointer">
-            <FaSearch />
+      {/* Dark Overlay for Better Text Readability */}
+      <div className="absolute inset-0 bg-black/30" />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center">
+        <div className="max-w-3xl space-y-6 text-white">
+          {/* Main Heading */}
+          <h1 className="text-4xl font-bold leading-tight md:text-6xl md:leading-tight lg:text-7xl">
+            Discover Amazing
+            <span className="block text-blue-500">Products Online</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="mx-auto max-w-2xl text-lg font-light text-gray-100 md:text-xl">
+            Shop the latest trends with exclusive deals and fast delivery. Your
+            perfect purchase is just a click away!
+          </p>
+
+          {/* Search Bar */}
+          <div className="relative mx-auto max-w-xl">
+            <input
+              type="text"
+              placeholder="Search for products, brands, and categories..."
+              className="w-full rounded-full border-0 bg-white/95 px-8 py-4 text-gray-800 shadow-lg backdrop-blur-sm placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2"
+            />
+            <button
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-yellow-300 p-3 transition-all hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2"
+              aria-label="Search products"
+            >
+              <FaSearch className="text-blue-600 text-lg" />
+            </button>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="flex justify-center gap-8 pt-8 text-sm text-gray-200">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">10K+</div>
+              <div>Happy Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">5K+</div>
+              <div>Products</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">24/7</div>
+              <div>Support</div>
+            </div>
           </div>
         </div>
-        {/* bottom blur effect  */}
-        <div className="absolute inset-x-0 bottom-0 h-3/4 -mb-2 bg-gradient-to-t from-white via-transparent to-transparent blur-sm" />
       </div>
+
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-blue-500/50 to-transparent" />
     </section>
   );
 };
+
 export default Hero;

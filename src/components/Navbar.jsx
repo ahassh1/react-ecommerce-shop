@@ -2,12 +2,16 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg">
       {/* header top start  */}
-      <div className="navbar max-w-screen-2xl container mx-auto  px-4">
+      <div className="navbar max-w-screen-2xl container mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden text-white"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -15,35 +19,33 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              tabIndex={-1}
+              className="menu menu-sm dropdown-content bg-gradient-to-r from-blue-500 to-purple-600 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li className="hover:bg-yellow-300 hover:text-white">
+              <li className="hover:bg-white/20 hover:text-white text-white">
                 <Link to="/">Home</Link>
               </li>
-              <li className="hover:bg-yellow-300 hover:text-white">
+              <li className="hover:bg-white/20 hover:text-white text-white">
                 <Link to="/shop">Shop</Link>
               </li>
-              <li className="hover:bg-yellow-300 hover:text-white">
+              <li className="hover:bg-white/20 hover:text-white text-white">
                 <Link to="/blog">Blog</Link>
               </li>
-              <li className="hover:bg-yellow-300 hover:text-white">
+              <li className="hover:bg-white/20 hover:text-white text-white">
                 <Link to="/about">About</Link>
               </li>
-              <li className="hover:bg-yellow-300 hover:text-white">
+              <li className="hover:bg-white/20 hover:text-white text-white">
                 <Link to="/contact">Contact</Link>
               </li>
-              <li></li>
             </ul>
           </div>
           <Link
@@ -51,47 +53,47 @@ const Navbar = () => {
             className="text-xl font-bold flex justify-center gap-1.5"
           >
             <div className="flex items-center">
-              <img src="/favicon.png" alt="" />
-              <span className="text-yellow-300 text-2xl">
-                Shop<span className="text-black">Zones</span>
+              <img src="/favicon.png" alt="ShopZones Logo" />
+              <span className="text-white text-2xl">
+                Shop<span className="text-yellow-300">Zones</span>
               </span>
             </div>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li className="hover:bg-yellow-300 hover:text-white">
+          <ul className="menu menu-horizontal px-1 text-white">
+            <li className="hover:bg-white/20 hover:text-white">
               <Link to="/">Home</Link>
             </li>
-            <li className="hover:bg-yellow-300 hover:text-white">
+            <li className="hover:bg-white/20 hover:text-white">
               <Link to="/shop">Shop</Link>
             </li>
-            <li className="hover:bg-yellow-300 hover:text-white">
+            <li className="hover:bg-white/20 hover:text-white">
               <Link to="/blog">Blog</Link>
             </li>
-            <li className="hover:bg-yellow-300 hover:text-white">
+            <li className="hover:bg-white/20 hover:text-white">
               <Link to="/about">About</Link>
             </li>
-            <li className="hover:bg-yellow-300 hover:text-white">
+            <li className="hover:bg-white/20 hover:text-white">
               <Link to="/contact">Contact</Link>
             </li>
             <li>
               <details>
-                <summary className="hover:bg-yellow-300 hover:text-white">
+                <summary className="hover:bg-white/20 hover:text-white">
                   Categories
                 </summary>
-                <ul className="p-2 z-50">
-                  <li className="hover:bg-yellow-300 hover:text-white">
-                    <Link to="/">Pant</Link>
+                <ul className="p-2 z-50 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                  <li className="hover:bg-white/20 hover:text-white">
+                    <Link to="/">Electronics</Link>
                   </li>
-                  <li className="hover:bg-yellow-300 hover:text-white">
-                    <Link to="/">Shirt</Link>
+                  <li className="hover:bg-white/20 hover:text-white">
+                    <Link to="/">Fashion</Link>
                   </li>
-                  <li className="hover:bg-yellow-300 hover:text-white">
-                    <Link to="/">Bottle</Link>
+                  <li className="hover:bg-white/20 hover:text-white">
+                    <Link to="/">Home & Garden</Link>
                   </li>
-                  <li className="hover:bg-yellow-300 hover:text-white">
-                    <Link to="/">Shoes</Link>
+                  <li className="hover:bg-white/20 hover:text-white">
+                    <Link to="/">Sports</Link>
                   </li>
                 </ul>
               </details>
@@ -101,14 +103,13 @@ const Navbar = () => {
         <div className="navbar-end space-x-3">
           <Link
             to="/login"
-            className="btn btn-outline hover:bg-yellow-300 hidden sm:flex"
+            className="btn btn-outline border-white text-white hover:bg-white hover:text-blue-600 hidden sm:flex"
           >
             Log In
           </Link>
           <Link
-            to="/ErrorPage
-          "
-            className="btn btn-primary bg-yellow-300 text-black border-none"
+            to="/signup"
+            className="btn bg-white text-blue-600 border-none hover:bg-gray-100 hover:text-blue-700"
           >
             Create Account
           </Link>
