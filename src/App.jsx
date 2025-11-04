@@ -1,10 +1,17 @@
+import { Outlet } from "react-router";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <h2 className="bg-red-400">hello polash</h2>
-    </>
+    <div>
+      <Navbar />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
